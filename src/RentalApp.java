@@ -1,10 +1,12 @@
 import java.util.*;
 
 public class RentalApp {
-	static Collection<Car> carList = new HashSet<Car>(); // tu trzymamy liste
-	// aut
-	final static String MAIN_MENU = "1. Dodaj samochód\n2. Usuń samochód\n3. Edytuj samochód\n4. Sprawdź samochód\n5. Wypożycz samochód\n6. Oddaj samochód\n0. Wyjdź z programu";
+	static Collection<Car> carList = new HashSet<Car>(); // tu trzymamy liste aut
+	
+	final static String MAIN_MENU = "1. Dodaj samochód\n2. Usuń samochód\n3. Edytuj samochód\n4. Sprawdź samochód\n" +
+            "5. Wypożycz samochód\n6. Oddaj samochód\n7. Wyświetl statystyki\n0. Wyjdź z programu";
 	final static String CAR_NOT_FOUND = "Car was not found in database.";
+	
 	static Scanner sc = new Scanner(System.in);
 
 	public static void addCar(String registration) {
@@ -26,12 +28,17 @@ public class RentalApp {
 	public static void deleteCar(String registration) {
 		String regNo = registration;
 		boolean carNotFound = true;
+		Car temp = null;
 
 		for (Car s : carList) {
 			if (regNo.equals(s.getRegNumber())) {
-				carList.remove(s);
 				carNotFound = false;
+				temp = s;
 			}
+		}
+		
+		if (!carNotFound) {
+			carList.remove(temp);
 		}
 
 		if (carNotFound) {
@@ -122,6 +129,7 @@ public class RentalApp {
 	public static void main(String[] args) {
 		System.out.println(MAIN_MENU);
 		String regNo;
+		int choice;
 
 		boolean quit = false;
 		int menuItem;
@@ -154,6 +162,24 @@ public class RentalApp {
 				regNo = askForRegistration();
 				returnCarToRental(regNo);
 				break;
+			case 7:
+				System.out.println("1. Wyświetl historię całej wypożyczalni.\n" +
+						"2. Wyświetl historię wypożyczonego samochodu\n" +
+						"3. Wyświetl statystyki.");
+				choice = sc.nextInt();
+				sc.nextLine();
+				switch (choice) {
+				case 1:
+					printRentalHistory();
+					break;
+				case 2:
+					printCarHistory();
+					break;
+				case 3:
+					printStatistics();
+					break;
+				}
+				break;
 			case 0:
 				quit = true;
 				break;
@@ -162,6 +188,34 @@ public class RentalApp {
 			}
 		} while (!quit);
 
+	}
+
+	private static void printStatistics() {
+		int allCars=0, rentedCars=0, freeCars=0;
+		
+		for (Car s : carList) {
+			allCars+=1;
+			if (s.getRentStatus()) rentedCars+=1;
+			else freeCars+=1;
+			}
+		System.out.println("Number of all cars: "+allCars);
+		System.out.println("Number of rented cars: "+rentedCars);
+		System.out.println("Number of free cars: "+freeCars);
+		}
+		
+
+	private static void printCarHistory() {
+		String regNo = askForRegistration();
+        for (Car s : carList) {
+            if (s.getRegNumber().equals(regNo)) {
+                s.printRentalDates();
+            }
+        }
+	}
+
+	private static void printRentalHistory() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
