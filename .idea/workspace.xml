@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb7cae43-c988-45de-b722-b7afd1c0cb34" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/testRentalApp.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/testCarList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/testCarList.java" afterPath="" />
+    <list default="true" id="bb7cae43-c988-45de-b722-b7afd1c0cb34" name="Default" comment="Added another Unit Test">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/testRentalApp.class" afterPath="$PROJECT_DIR$/bin/testRentalApp.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarRentalWithHistory.iml" afterPath="$PROJECT_DIR$/CarRentalWithHistory.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/testRentalApp.java" afterPath="$PROJECT_DIR$/test/testRentalApp.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +31,8 @@
       <file leaf-file-name="testRentalApp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/testRentalApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+            <state relative-caret-position="189">
+              <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,8 +43,8 @@
       <file leaf-file-name="RentalApp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RentalApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14">
-              <caret line="129" column="38" lean-forward="false" selection-start-line="129" selection-start-column="38" selection-end-line="129" selection-end-column="38" />
+            <state relative-caret-position="42">
+              <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="56" />
               <folding>
                 <element signature="method#addCar#0;class#RentalApp#0" expanded="false" />
                 <element signature="method#deleteCar#0;class#RentalApp#0" expanded="false" />
@@ -86,6 +83,7 @@
         <option value="$PROJECT_DIR$/src/RentalApp.java" />
         <option value="$PROJECT_DIR$/src/testCarList.java" />
         <option value="$PROJECT_DIR$/src/testRentalApp.java" />
+        <option value="$PROJECT_DIR$/test/testRentalApp.java" />
       </list>
     </option>
   </component>
@@ -379,6 +377,9 @@
     <history-entry file="All_in_CarRentalWithHistory - 2017.10.22 at 21h 29m 08s.xml">
       <configuration name="All in CarRentalWithHistory" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_CarRentalWithHistory - 2017.10.22 at 21h 55m 44s.xml">
+      <configuration name="All in CarRentalWithHistory" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="testCarList - 2017.10.22 at 20h 59m 35s.xml">
       <configuration name="testCarList" configurationId="JUnit" />
     </history-entry>
@@ -408,11 +409,11 @@
     <frame x="77" y="40" width="1319" height="786" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3259587" sideWeight="0.49430525" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3259587" sideWeight="0.49126804" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3259587" sideWeight="0.5117692" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3259587" sideWeight="0.50873196" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3259587" sideWeight="0.48823082" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3259587" sideWeight="0.70235384" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.49730563" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -431,6 +432,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added another Unit Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added another Unit Test" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -493,22 +499,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/CarHistory.class" />
     <entry file="file://$PROJECT_DIR$/src/CarHistory.java" />
-    <entry file="file://$PROJECT_DIR$/src/RentalApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="129" column="38" lean-forward="false" selection-start-line="129" selection-start-column="38" selection-end-line="129" selection-end-column="38" />
-          <folding>
-            <element signature="method#addCar#0;class#RentalApp#0" expanded="false" />
-            <element signature="method#deleteCar#0;class#RentalApp#0" expanded="false" />
-            <element signature="method#editCar#0;class#RentalApp#0" expanded="false" />
-            <element signature="method#checkCar#0;class#RentalApp#0" expanded="false" />
-            <element signature="method#rentCarFromRental#0;class#RentalApp#0" expanded="false" />
-            <element signature="method#returnCarToRental#0;class#RentalApp#0" expanded="false" />
-            <element signature="method#askForRegistration#0;class#RentalApp#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/testCarList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -527,10 +517,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/RentalApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="56" />
+          <folding>
+            <element signature="method#addCar#0;class#RentalApp#0" expanded="false" />
+            <element signature="method#deleteCar#0;class#RentalApp#0" expanded="false" />
+            <element signature="method#editCar#0;class#RentalApp#0" expanded="false" />
+            <element signature="method#checkCar#0;class#RentalApp#0" expanded="false" />
+            <element signature="method#rentCarFromRental#0;class#RentalApp#0" expanded="false" />
+            <element signature="method#returnCarToRental#0;class#RentalApp#0" expanded="false" />
+            <element signature="method#askForRegistration#0;class#RentalApp#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/testRentalApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+        <state relative-caret-position="189">
+          <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
