@@ -214,8 +214,9 @@ public class RentalApp {
 	}
 
 	private static void printRentalHistory() {
-		// TODO Auto-generated method stub
-		
-	}
+        for (Car s : carList) {
+            s.printRentalDates();
+        }
+    }
 
 }
