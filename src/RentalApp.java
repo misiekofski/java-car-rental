@@ -6,7 +6,7 @@ public class RentalApp {
 	final static String MAIN_MENU = "1. Dodaj samochód\n2. Usuń samochód\n3. Edytuj samochód\n4. Sprawdź samochód\n" +
             "5. Wypożycz samochód\n6. Oddaj samochód\n7. Wyświetl statystyki\n0. Wyjdź z programu";
 	final static String CAR_NOT_FOUND = "Car was not found in database.";
-	
+
 	static Scanner sc = new Scanner(System.in);
 
 	public static void addCar(String registration) {

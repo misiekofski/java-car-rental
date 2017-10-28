@@ -42,5 +42,21 @@ public class testRentalApp {
         mercedes.rentCar();
         volvo.rentCar();
         Assert.assertEquals(carList.size(), 4);
+
+    }
+    @Test
+    public void testCarRentalHistory() {
+        mercedes.rentCar();
+        mercedes.returnCar();
+        try {
+            Thread.sleep(2000);
+        } catch (Exception e) {}
+        mercedes.rentCar();
+        mercedes.returnCar();
+        try {
+            Thread.sleep(4000);
+        } catch (Exception e) {}
+        mercedes.rentCar();
+        mercedes.printRentalDates();
     }
 }

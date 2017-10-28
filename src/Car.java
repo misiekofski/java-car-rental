@@ -40,10 +40,11 @@ public class Car {
 		return regNo;
 	}
 
-	public Car getCarByRegNo(String number) {
-		if (this.regNo.equals(number)) return this;
-		else return null;
-	}
+//  I thought that returning object by RegNo was a good idea...
+//	public Car getCarByRegNo(String number) {
+//		if (this.regNo.equals(number)) return this;
+//		else return null;
+//	}
 
 	
 	public boolean getRentStatus() {
