@@ -4,16 +4,28 @@ import java.util.Scanner;
 
 public class RentalApp {
 	private static Collection<Vehicle> carList = new HashSet<>(); // tu trzymamy liste aut
-	
-	final static String MAIN_MENU = "1. Dodaj samochód\n2. Usuń samochód\n3. Edytuj samochód\n4. Sprawdź samochód\n" +
-            "5. Wypożycz samochód\n6. Oddaj samochód\n7. Wyświetl statystyki\n0. Wyjdź z programu";
+
+    final static String MAIN_MENU = "1. Dodaj samochód\n" +
+            "2. Usuń samochód\n" +
+            "3. Edytuj samochód\n" +
+            "4. Sprawdź samochód\n" +
+            "5. Wypożycz samochód\n" +
+            "6. Oddaj samochód\n" +
+            "7. Wyświetl statystyki\n" +
+            "0. Wyjdź z programu";
+
+    final static String STAT_MENU = "1. Wyświetl historię całej wypożyczalni.\n" +
+            "2. Wyświetl historię wypożyczonego samochodu\n" +
+            "3. Wyświetl statystyki.";
+
 	final static String CAR_NOT_FOUND = "Car was not found in database.";
 
 	static Scanner sc = new Scanner(System.in);
 
 	public static void addCar(String registration) {
 		String regNo = registration;
-		for (Vehicle v : carList) {
+        int choice;
+        for (Vehicle v : carList) {
 			if (regNo.equals(v.getRegNumber())) {
 				System.out.println("Car with this reg no exist in DB");
 				return;
@@ -21,11 +33,27 @@ public class RentalApp {
 		}
 		System.out.println("Enter producer: ");
 		String producer = sc.nextLine();
-		System.out.println("Enter model: ");
-		String model = sc.nextLine();
-
-		carList.add(new Car(regNo, producer, model));
-	}
+        System.out.println("Enter model: ");
+        String model = sc.nextLine();
+        System.out.println("Enter type [1]Car\n" +
+                "[2]Motor\n" +
+                "[3]: Bus");
+        choice = sc.nextInt();
+        sc.nextLine();
+        switch (choice) {
+            case 1:
+                carList.add(new Car(regNo, producer, model));
+                break;
+            case 2:
+                carList.add(new Motor(regNo, producer, model));
+                break;
+            case 3:
+                carList.add(new Bus(regNo, producer, model));
+                break;
+            default:
+                System.out.println("Please enter 1, 2 or 3.");
+        }
+    }
 
 	public static void deleteCar(String registration) {
 		String regNo = registration;
@@ -77,8 +105,8 @@ public class RentalApp {
 
 		for (Vehicle s : carList) {
 			if (registration.equals(s.getRegNumber())) {
-				s.checkIsCarRented();
-				carNotFound = false;
+                s.checkIsVehicleRented();
+                carNotFound = false;
 			}
 		}
 
@@ -165,10 +193,8 @@ public class RentalApp {
 				returnCarToRental(regNo);
 				break;
 			case 7:
-				System.out.println("1. Wyświetl historię całej wypożyczalni.\n" +
-						"2. Wyświetl historię wypożyczonego samochodu\n" +
-						"3. Wyświetl statystyki.");
-				choice = sc.nextInt();
+                System.out.println(STAT_MENU);
+                choice = sc.nextInt();
 				sc.nextLine();
 				switch (choice) {
 				case 1:
