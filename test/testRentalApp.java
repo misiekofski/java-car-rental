@@ -1,12 +1,8 @@
-import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Collection;
 import java.util.HashSet;
-
-import static java.lang.Thread.sleep;
 
 public class testRentalApp {
     Car hyundai;
@@ -30,33 +26,13 @@ public class testRentalApp {
 
     @Test
     public void testCarRentAndReturn() {
-        hyundai.rentCar();
-        hyundai.returnCar();
-        hyundai.rentCar();
-        boolean checkCarRental = hyundai.getRentStatus();
-        Assert.assertTrue(checkCarRental);
     }
 
     @Test
     public void testCarList() {
-        mercedes.rentCar();
-        volvo.rentCar();
-        Assert.assertEquals(carList.size(), 4);
-
     }
+
     @Test
     public void testCarRentalHistory() {
-        mercedes.rentCar();
-        mercedes.returnCar();
-        try {
-            Thread.sleep(2000);
-        } catch (Exception e) {}
-        mercedes.rentCar();
-        mercedes.returnCar();
-        try {
-            Thread.sleep(4000);
-        } catch (Exception e) {}
-        mercedes.rentCar();
-        mercedes.printRentalDates();
     }
 }

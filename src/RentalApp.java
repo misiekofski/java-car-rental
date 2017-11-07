@@ -1,7 +1,9 @@
-import java.util.*;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Scanner;
 
 public class RentalApp {
-	static Collection<Car> carList = new HashSet<Car>(); // tu trzymamy liste aut
+	private static Collection<Vehicle> carList = new HashSet<>(); // tu trzymamy liste aut
 	
 	final static String MAIN_MENU = "1. Dodaj samochód\n2. Usuń samochód\n3. Edytuj samochód\n4. Sprawdź samochód\n" +
             "5. Wypożycz samochód\n6. Oddaj samochód\n7. Wyświetl statystyki\n0. Wyjdź z programu";
@@ -11,8 +13,8 @@ public class RentalApp {
 
 	public static void addCar(String registration) {
 		String regNo = registration;
-		for (Car s : carList) {
-			if (regNo.equals(s.getRegNumber())) {
+		for (Vehicle v : carList) {
+			if (regNo.equals(v.getRegNumber())) {
 				System.out.println("Car with this reg no exist in DB");
 				return;
 			}
@@ -28,12 +30,12 @@ public class RentalApp {
 	public static void deleteCar(String registration) {
 		String regNo = registration;
 		boolean carNotFound = true;
-		Car temp = null;
+		Vehicle temp = null;
 
-		for (Car s : carList) {
-			if (regNo.equals(s.getRegNumber())) {
+		for (Vehicle v : carList) {
+			if (regNo.equals(v.getRegNumber())) {
 				carNotFound = false;
-				temp = s;
+				temp = v;
 			}
 		}
 		
@@ -50,7 +52,7 @@ public class RentalApp {
 		String regNo = registration;
 		boolean carNotFound = true;
 
-		for (Car s : carList) {
+		for (Vehicle s : carList) {
 			if (regNo.equals(s.getRegNumber())) {
 				// wywalamy znaleziony samochód o znanej rejestracji
 				carList.remove(s);
@@ -73,7 +75,7 @@ public class RentalApp {
 	public static void checkCar(String registration) {
 		boolean carNotFound = true;
 
-		for (Car s : carList) {
+		for (Vehicle s : carList) {
 			if (registration.equals(s.getRegNumber())) {
 				s.checkIsCarRented();
 				carNotFound = false;
@@ -90,9 +92,9 @@ public class RentalApp {
 		String regNo = registration;
 		boolean carNotFound = true;
 
-		for (Car s : carList) {
+		for (Vehicle s : carList) {
 			if (regNo.equals(s.getRegNumber())) {
-				s.rentCar();
+				s.rentVehicle();
 				carNotFound = false;
 			}
 		}
@@ -107,7 +109,7 @@ public class RentalApp {
 		String regNo = registration;
 		boolean carNotFound = true;
 
-		for (Car s : carList) {
+		for (Vehicle s : carList) {
 			if (regNo.equals(s.getRegNumber())) {
 				s.returnCar();
 				carNotFound = false;
@@ -192,8 +194,8 @@ public class RentalApp {
 
 	private static void printStatistics() {
 		int allCars=0, rentedCars=0, freeCars=0;
-		
-		for (Car s : carList) {
+
+		for (Vehicle s : carList) {
 			allCars+=1;
 			if (s.getRentStatus()) rentedCars+=1;
 			else freeCars+=1;
@@ -206,17 +208,17 @@ public class RentalApp {
 
 	private static void printCarHistory() {
 		String regNo = askForRegistration();
-        for (Car s : carList) {
-            if (s.getRegNumber().equals(regNo)) {
-                s.printRentalDates();
+		for (Vehicle s : carList) {
+			if (s.getRegNumber().equals(regNo)) {
+				s.printRentalDates();
             }
         }
 	}
 
 	private static void printRentalHistory() {
-        for (Car s : carList) {
-            s.printRentalDates();
-        }
+		for (Vehicle s : carList) {
+			s.printRentalDates();
+		}
     }
 
 }
