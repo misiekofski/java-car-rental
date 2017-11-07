@@ -41,7 +41,7 @@ public abstract class Vehicle {
         return this.isVehicleRented;
     }
 
-    public void checkIsCarRented() {
+    public void checkIsVehicleRented() {
         if (this.isVehicleRented) {
             printVehicleData();
             System.out.println("is rented at this moment.");
