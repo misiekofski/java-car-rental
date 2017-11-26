@@ -1,8 +1,7 @@
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Scanner;
-import java.util.TreeSet;
-
 
 
 public class RentalApp {
@@ -246,12 +245,10 @@ public class RentalApp {
 
 
     private static void printRentalHistory() {
-        TreeSet<Vehicle> sortedCarList = new TreeSet<Vehicle>();
-        sortedCarList.addAll(carList);
+//        TreeSet<Vehicle> sortedCarList = new TreeSet<Vehicle>(Comparator.comparing(vehicle -> vehicle.getRegNo()));
+//        sortedCarList.addAll(carList);
+        carList.stream().sorted(Comparator.comparing(Vehicle::getRegNumber)).forEach(v -> v.printRentalDates());
 
-        for (Vehicle s : sortedCarList) {
-            s.printRentalDates();
-        }
     }
 
 }
