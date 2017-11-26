@@ -1,8 +1,6 @@
 public class Car extends Vehicle {
     private int carSeats = 4;
-    private int rentalRate = 100;
-
-    public enum Color {RED, GREEN, WHITE, GRAY, BLACK, NOT_SET;}
+    private int rentalRate;
 
     private Color color;
 
@@ -17,16 +15,21 @@ public class Car extends Vehicle {
         return color;
     }
 
-    public void setColor(Color color) {
-        this.color = color;
+    public void setColor(Color c) {
+        this.color = c;
     }
 
     public void setRentalRate() {
         switch (color) {
             case RED:
                 this.rentalRate = 150;
-            default:
+                break;
+            case GREEN:
                 this.rentalRate = 120;
+                break;
+            default:
+                this.rentalRate = 100;
+                break;
         }
     }
 
