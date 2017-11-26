@@ -1,6 +1,9 @@
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Scanner;
+import java.util.TreeSet;
+
+
 
 public class RentalApp {
     private static Collection<Vehicle> carList = new HashSet<>(); // tu trzymamy liste aut
@@ -241,8 +244,12 @@ public class RentalApp {
         }
     }
 
+
     private static void printRentalHistory() {
-        for (Vehicle s : carList) {
+        TreeSet<Vehicle> sortedCarList = new TreeSet<Vehicle>();
+        sortedCarList.addAll(carList);
+
+        for (Vehicle s : sortedCarList) {
             s.printRentalDates();
         }
     }

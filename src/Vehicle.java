@@ -10,6 +10,7 @@ public abstract class Vehicle {
     protected boolean isVehicleRented;
     protected List<Date> rentalDates = new ArrayList<>();
 
+
     @Override
     public String toString() {
         return "regNo: " + regNo + ", producer: " + producer + ", model: " + model + ", rented: " + isVehicleRented;

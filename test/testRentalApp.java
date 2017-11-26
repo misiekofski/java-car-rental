@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -34,5 +35,16 @@ public class testRentalApp {
 
     @Test
     public void testCarRentalHistory() {
+    }
+
+    @Test
+    public void testRentalPrice() {
+        Car green = new Car("D1 6547", "Fiat Fiat", "Panda");
+        green.setColor(Car.Color.GREEN);
+        green.setRentalRate();
+        Assert.assertEquals(green.getRentalRate(), 120);
+        green.setColor(Car.Color.RED);
+        Assert.assertEquals(green.getRentalRate(), 150);
+
     }
 }
