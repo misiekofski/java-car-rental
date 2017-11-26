@@ -40,11 +40,15 @@ public class testRentalApp {
     @Test
     public void testRentalPrice() {
         Car green = new Car("D1 6547", "Fiat Fiat", "Panda");
-        green.setColor(Car.Color.GREEN);
+        green.setColor(Color.GREEN);
         green.setRentalRate();
-        Assert.assertEquals(green.getRentalRate(), 120);
-        green.setColor(Car.Color.RED);
-        Assert.assertEquals(green.getRentalRate(), 150);
+        int greenPrice = green.getRentalRate();
+        Assert.assertEquals(120, greenPrice);
+        // now we repaint car to red to get moar moneyzzz
+        green.setColor(Color.RED);
+        green.setRentalRate();
+        int redPrice = green.getRentalRate();
+        Assert.assertEquals(150, redPrice);
 
     }
 }
